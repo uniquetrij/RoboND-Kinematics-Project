@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 # import modules
 import rospy
@@ -112,20 +113,20 @@ def handle_calculate_IK(req):
             R_EE = z_rotate(yaw) * y_rotate(pitch) * x_rotate(roll) * R_COR
             EE = Matrix([[px], [py], [pz]])
             # Wrist Center
-            W_C = EE - (0.303) * R_EE[:, 2]
+            WC = EE - (0.303) * R_EE[:, 2]
             #
             # Calculate joint angles using Geometric IK method
             #
             SIDE_A = 1.501
-            SIDE_B_xy = sqrt(W_C[0] * W_C[0] + W_C[1] * W_C[1]) - 0.35
-            SIDE_B_z = W_C[2] - 0.75
+            SIDE_B_xy = sqrt(WC[0] * WC[0] + WC[1] * WC[1]) - 0.35
+            SIDE_B_z = WC[2] - 0.75
             SIDE_B = sqrt(pow((SIDE_B_xy), 2) + pow((SIDE_B_z), 2))
             SIDE_C = 1.25
 
             ANG_A = acos((SIDE_B * SIDE_B + SIDE_C * SIDE_C - SIDE_A * SIDE_A) / (2 * SIDE_B * SIDE_C))
             ANG_B = acos((- SIDE_B * SIDE_B + SIDE_C * SIDE_C + SIDE_A * SIDE_A) / (2 * SIDE_A * SIDE_C))
 
-            theta_1 = atan2(W_C[1], W_C[0])
+            theta_1 = atan2(WC[1], WC[0])
             theta_2 = pi / 2 - ANG_A - atan2(SIDE_B_z, SIDE_B_xy)
             theta_3 = pi / 2 - ANG_B + 0.036
 
