@@ -305,7 +305,7 @@ and is faster in execution.
 
 #### 1. Fill in the `IK_server.py` file with properly commented python code for calculating Inverse Kinematics based on previously performed Kinematic Analysis. Your code must guide the robot to successfully complete 8/10 pick and place cycles. Briefly discuss the code you implemented and your results. 
 
-The final working code for the project can be found in the [IK_server.py](kuka_arm/scripts/IK_server.py) file
+The final working code for the project can be found in the [IK_server.py](kuka_arm/scripts/IK_server.py) file. 
 The output video can be found [here](misc_images/result.mp4).
 
 
