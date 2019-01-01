@@ -263,18 +263,21 @@ triangle with sides A,B and C where two sides are known, A = d<sub>4</sub> = 1.5
 #### Inverse Orientation Kinematics
 Here we solve for the last 3 joint angles viz. θ<sub>4</sub>, θ<sub>5</sub> and θ<sub>6</sub>.  
 Using the individual DH transforms we can obtain the resultant transform and hence resultant rotation by:
+
 ```R0_6 = R0_1*R1_2*R2_3*R3_4*R4_5*R5_6```
 
 Since the overall RPY (Roll Pitch Yaw) rotation between base_link and gripper_link must be equal to the product of 
 individual rotations between respective links, following holds true:
+
 ```R0_6 = R_EE```
 
 where.
-R_EE = Homogeneous RPY rotation between base_link and gripper_link as calculated above.
+`R_EE` = Homogeneous RPY rotation between `base_link` and `gripper_link` as calculated above.
 
 
 We can substitute the values we calculated for joints 1 to 3 in their respective individual rotation matrices and 
 pre-multiply both sides of the above equation by inv(R0_3) which leads to:
+
 ```R3_6 = inv(R0_3) * R_EE```
 
 The resultant matrix on the RHS (Right Hand Side of the equation) does not have any variables after substituting the 
