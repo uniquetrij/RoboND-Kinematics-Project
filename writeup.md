@@ -309,7 +309,7 @@ and is faster in execution.
 The final working code for the project can be found in the [IK_server.py](kuka_arm/scripts/IK_server.py) file. 
 Here is a screenshot of the working simulation in progress:
 ![alt_text][screenshot]
-The output video can be found [here](misc_images/result.mp4).
+A video of the results can be found [here](misc_images/result.mp4).
 
 
 
