@@ -246,7 +246,7 @@ triangle with sides A,B and C where two sides are known, A = d<sub>4</sub> = 1.5
 
 ```python
             # the sides 
-            SIDE_A = 1.501
+            SIDE_A = 1.50
             SIDE_B_xy = sqrt(WC[0] * WC[0] + WC[1] * WC[1]) - 0.35
             SIDE_B_z = WC[2] - 0.75
             SIDE_B = sqrt(pow((SIDE_B_xy), 2) + pow((SIDE_B_z), 2))
