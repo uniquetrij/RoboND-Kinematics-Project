@@ -22,6 +22,7 @@
 [robot-joint-space-1]: ./misc_images/robot-joint-space-1.png
 [robot-joint-space-2]: ./misc_images/robot-joint-space-2.png
 [inverse-calculation]: ./misc_images/inverse-calculation.png
+[screenshot]: ./misc_images/screenshot.png
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/972/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -306,6 +307,8 @@ and is faster in execution.
 #### 1. Fill in the `IK_server.py` file with properly commented python code for calculating Inverse Kinematics based on previously performed Kinematic Analysis. Your code must guide the robot to successfully complete 8/10 pick and place cycles. Briefly discuss the code you implemented and your results. 
 
 The final working code for the project can be found in the [IK_server.py](kuka_arm/scripts/IK_server.py) file. 
+Here is a screenshot of the working simulation in progress:
+![alt_text][screenshot]
 The output video can be found [here](misc_images/result.mp4).
 
 
